@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Наши проекты
+{% endblock %}
+
+
+{% block body %}
+<section class="our__projects">
+    <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/1.jpg')}}" alt="">
+     <div class="fon"></div>
+    <div class="menu__fon"></div>
+    <div class="container">
+      <h1 class="h1">Все проекты</h1>
+    </div>
+</section>
+
+ {% for post in posts %}
+    <div class="col">
+      <div class="card shadow-sm">
+
+      </div>
+    </div>
+    {% endfor %}
+{% endblock %}
