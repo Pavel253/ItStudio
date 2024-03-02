@@ -49,8 +49,7 @@
 .first__screen .btn {
   font-family: var(--font-family);
   border-radius: 30px;
-  width: 200px;
-  height: 45px;
+  padding: 20px 40px;
   box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
   background: #4985ff;
   font-weight: 500;
@@ -140,8 +139,8 @@ margin-top: 50px;
     text-align: center;
     color: #fff;
     border-radius: 30px;
-    width: 200px;
-    height: 45px;
+    padding: 20px 47px;
+
     box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
     background: #4985ff;
 }
@@ -270,8 +269,7 @@ margin-top: 50px;
     left: 0px;
 }
 .all__services .container .btn {
-    width: 200px;
-    height: 45px;
+    padding: 16px 48px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -373,8 +371,7 @@ color: #999;
 }
 .all__projects .btn {
     margin-top: 50px;
-    width: 200px;
-    height: 45px;
+    padding: 15px 48px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -504,7 +501,7 @@ color: #fff;
     height: 45px;
     box-shadow: 0 0 10px 0 rgba(111, 111, 111, 0.25);
     background: #4985ff;
-     position: absolute;
+    position: absolute;
     top: 0px;
     right: 0px
 }
@@ -521,3 +518,69 @@ color: #fff;
 
 
 
+.footer {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: inherit;
+    padding: 70px 0px 30px 0px;
+    background-color: #F6F6F8;
+  }
+  .footer .footer__link-container {
+    display: flex; 
+    justify-content: space-between;
+    width: 1110px;
+  }
+  .footer .footer__link {
+    width: 255px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+  .footer .footer__link .h2 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+    padding-bottom: 35px;
+    font-family: var(--font-family);
+  }
+  .footer .footer__link .link {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .footer .footer__link span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 158%;
+    color: #999;
+    padding-left: 10px;
+    font-family: var(--font-family);
+  }
+  .footer .footer__link:nth-child(2),  .footer .footer__link:nth-child(3),  .footer .footer__link:nth-child(4) {
+    .link {
+      
+      .ico {
+        width: 12px;
+        height: 10px;
+      }
+    }
+  }
+  
+  .footer .line__footer {
+    width: 1110px;
+    height: 1px;
+    background-color: #e0e0e0;
+  }
+  .footer .prava {
+    padding: 30px 0px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 158%;
+    text-align: center;
+    color: #999;
+  }

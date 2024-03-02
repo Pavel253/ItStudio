@@ -10,7 +10,7 @@
     <div class="container">
         <span class="span">Передовая IT студия</span>
         <h1 class='h1'>Мы создаем легкие решения сложных задач и проблем</h1>
-        <button class="btn">Наши проекты</button>
+        <a href={{url_for('our_projects')}} class="btn">Наши проекты</a>
       </div>
       <img class='img__fon' src="{{url_for('static', filename='img/Rectangle.jpg')}}" alt="icons">
 </section>
@@ -38,7 +38,7 @@
                 <p>Популярный способ улучшения бизнеса и обеспечения удобства пользователей</p>
             </div>
         </div>
-        <button class="btn">Все услуги</button>
+        <a href={{url_for('services')}} class="btn">Все услуги</a>
        </div>
     </div>
 </section>
@@ -89,25 +89,25 @@
     <div class="container">
         <h2 class="h2">Наши работы, на которых<hr>
         мы специализируемся</h2>
-        <button class="btn">Все услуги</button>
+        <a href={{url_for('services')}} class="btn">Все услуги</a>
         <div class="all__services-container">
             <div class="all-services__item">
                 <img class='service__img' src="{{url_for('static', filename='img/all-service/Rectangle1.png')}}" alt="icons">
                 <h4 class="h4"><span>01.</span> Разработка и дизайн веб-сайтов</h4>
                 <p>Веб-сайт - это лицо вашего бизнеса в онлайн пространстве. Мы предлагаем услуги разработки и дизайна веб-сайтов, которые привлекают внимание пользователей.</p>
-                <a href="#">Подробнее</a>
+                <a href={{url_for('our_projects')}}>Подробнее</a>
             </div>
              <div class="all-services__item">
                 <img class='service__img' src="{{url_for('static', filename='img/all-service/Rectangle 2.1.png')}}" alt="icons">
                 <h4 class="h4"><span>02.</span> Мобильные приложения для iOS и Android</h4>
                 <p>Наша команда профессионалов создаст для вас уникальное и качественное приложение, которое отвечает всем современным требованиям и станет инструментом для вашего бизнеса.</p>
-                <a href="#">Подробнее</a>
+                <a href={{url_for('our_projects')}}>Подробнее</a>
             </div>
              <div class="all-services__item">
                 <img class='service__img' src="{{url_for('static', filename='img/all-service/Rectangle 2.2.png')}}" alt="icons">
                 <h4 class="h4"><span>03.</span> Кибербезопасность и защита данных</h4>
                 <p>Мы предлагаем надежные и эффективные решения для защиты данных и обеспечения кибербезопасности вашего бизнеса. </p>
-                <a href="#">Подробнее</a>
+                <a href={{url_for('our_projects')}}>Подробнее</a>
             </div>
         </div>
         <div class="line" />
@@ -124,7 +124,8 @@
             <img class='service__img' src="{{url_for('static', filename='img/all-project/Rectangle 2.png')}}" alt="icons">
             <img class='service__img' src="{{url_for('static', filename='img/all-project/Rectangle 2.png')}}" alt="icons">
         </div>
-        <button class="btn">Все проекты</button>
+        <a href={{url_for('our_projects')}} class="btn">Все проекты</a>
+
     </div>
 </section>
 
@@ -139,13 +140,14 @@
 
         <div class="line" />
 
-        <form class="subcribe">
+        <form method="POST" action="/add_email" enctype="multipart/form-data" class="subcribe">
             <h5 class="h5">Подпишитесь на нашу рассылку</h5>
             <p class="text">Полезные статьи, акции, новости - получите все это сейчас!</p>
-            <label class="email__form">
-                <input type="text" class="input__email" placeholder="Ваш e-mail">
-                <button class="btn__email">Подписаться</button>
-            </label>
+            <div class="email__form">
+                <label for="email"></label>
+                <input type="email" name="email" class="input__email" placeholder="Ваш e-mail">
+                <button type="submit" class="btn__email">Подписаться</button>
+            </div>
             <span class="span">Мы не шлем спам, и передаем никому ваши данные.</span>
         </form>
 

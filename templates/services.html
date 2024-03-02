@@ -1,10 +1,99 @@
 {% extends "base.html" %}
 
+{% block link %}
+{{ super() }}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
 {% block title %}
 Услуги
 {% endblock %}
 
 
 {% block body %}
+<section class="section__fon">
+  <div class="fon"></div>
+  <img class='img__fon' src="{{url_for('static', filename='./img/all-service/fon.jpg')}}" alt="">
+  <div class="container">
+    <h1 class='title'>Услуги</h1>
+    <p class='text__service'>Мы предоставляем услуги вам, но они могут отличаться от объема и количества работ в цене, так что мы договармиваемся о результатах сделки.</p>
+  </div>
+</section>
 
+<section class="section__product">
+  <div class="container">
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/веб-дизайн.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Веб-дизайн</h2>
+      <p class="text">Мы нарисуем приложение для телефонов и дизайн сайта как и для пк и для телефона.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/Frontend.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Frontend</h2>
+      <p class="text">Сделаем верстку, адаптируем и улучшим скорость сайта.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/backend.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Backend + безопасность</h2>
+      <p class="text">Наша задача: сделать серверную часть сайта и обезопасить база данных от хакеровю</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/app-development.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Приложение</h2>
+      <p class="text">Мы сделаем приложение и адаптируем его под все устройства. Гарантируем что приложения будет высокого качества.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/сайт-под-ключ.jpg')}}" alt="">
+      </div>
+      <h2 class="title__h2">Сайт под ключ</h2>
+      <p class="text">Мы проведет полное создание сайта и выложим на хостинг.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/хостинг.jpg')}}" alt="">
+      </div>
+      <h2 class="title__h2">Хостинг</h2>
+      <p class="text">Мы поможем вам с выбором хостинга, и решим проблему.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/ошибки.jpg')}}" alt="">
+      </div>
+      <h2 class="title__h2">Поддержка сайтов</h2>
+      <p class="text">Мы поможем при ошибке сайта, исправить недочет или улучшить функционал сайта или приложения.</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/wordpress.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Wordpress</h2>
+      <p class="text">Сделаем сайт, адаптируем и выложим на Wordpress</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+    <div class="product">
+      <div class="img__product">
+        <img src="{{url_for('static', filename='img/service/услуги/telegram_bot.png')}}" alt="">
+      </div>
+      <h2 class="title__h2">Телеграм бот</h2>
+      <p class="text">Сделаем бота для ваши нужд</p>
+      <a class='btn-tel'>Написать</a>
+    </div>
+  </div>
+</section>
 {% endblock %}

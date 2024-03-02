@@ -1,0 +1,129 @@
+.section__fon {
+  position: relative;
+  height: 480px;
+  width: 100%;
+  z-index: -1;
+}
+.fon {
+  width: 100%;
+  height: 720px;
+  background-color: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  z-index: 1;
+
+}
+.section__fon .img__fon {
+  width: 100%;
+  height: 920px;
+  position: absolute;
+  top: -200px;
+  left: 0px;
+  z-index: 0;
+}
+.section__fon  .container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto; 
+  height: 200px;
+  z-index: 1;
+}
+.section__fon .title {
+  font-weight: 800;
+  font-size: 46px;
+  color: #fff;
+  font-family: var(--font-family);
+  z-index: 10;
+}
+.section__fon .text__service {
+  padding-top: 30px;
+  width: 600px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #fff;
+  font-family: var(--font-family);
+  z-index: 10;
+}
+
+
+.section__product {
+  padding-top: 110px;
+  z-index:100;
+}
+
+.section__product .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.section__product .container .product {
+  background-color: #222;
+  border-radius: 20px;
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px #000;
+}
+
+.section__product .container .product .img__product {
+  height: 200px;
+  width: 360px;
+  position: relative;
+  overflow: hidden;
+} 
+
+.section__product .container .product .img__product img {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+} 
+
+.title__h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  color: #fff;
+  font-family: var(--font-family);
+  position: absolute;
+  top: 220px;
+  left: 20px
+}
+
+.text {
+  padding-top: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #fff;
+  font-family: var(--font-family);
+  position: absolute;
+  top: 250px;
+  left: 20px
+}
+.btn-tel {
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #fff;
+  background-color: #6e24ac;
+  font-family: var(--font-family);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn-tel:hover {
+  padding: 14px 22px;
+  background-color:#4224ac;
+  font-size: 18px;
+}

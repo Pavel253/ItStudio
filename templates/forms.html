@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/forms.css') }}">
+{% endblock %}
+
+
+{% block title %}
+Форма для админов
+{% endblock %}
+
+{% block body %}
+<section class="section__form">
+  <img class='fon__forms' src="{{url_for('static', filename='img/form/fon.jpg')}}" alt="">
+  <div class='form'>
+    <h1 class='h1'>Добавить проект</h1>
+    <form class='form__tag' method="POST" action="/upload" enctype="multipart/form-data">
+
+      <input type="text" class='text' name="name"><br><br>
+      <input type="file" class='file' name="image"><br><br>
+      <button type="submit" class='btn'>Добавить</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+

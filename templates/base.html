@@ -5,117 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href="{{url_for('static', filename='css/header.css') }}" />
   <link rel='stylesheet' href="{{url_for('static', filename='css/main.css') }}" />
-  <link rel='stylesheet' href="{{url_for('static', filename='css/our_projects.css') }}" />
-  <link rel='stylesheet' href="{{url_for('static', filename='css/footer.css') }}" />
-  
+  {% block link %} {% endblock %}
   <title> {% block title %} {% endblock %} </title>
 </head>
 <body>
 
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <a href="/" class="logo">
-            <img class='ico' src="{{url_for('static', filename='img/ico.png')}}" alt="icons">
-          </a>
-          <nav class='nav'>
-            <a href="{{url_for('index')}}">Главная</a>
-            <a href="{{url_for('our_projects')}}">Наши проекты</a>
-            <a href="{{url_for('services')}}">Услуги</a>
-          </nav>
-        </div>
-        <div class="lines"></div>
-      </div>
-    </header>
+    <div class="wrapper">
 
-    <div class="main">
-      <div class="content">
-       {% block body %} {% endblock %}
-      </div>
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <a href="/" class="logo">
+              <img class='ico' src="{{url_for('static', filename='img/ico.png')}}" alt="icons">
+            </a>
+            <nav class='nav'>
+              <a href="{{url_for('index')}}">Главная</a>
+              <a href="{{url_for('our_projects')}}">Наши проекты</a>
+              <a href="{{url_for('services')}}">Услуги</a>
+            </nav>
+          </div>
+          <div class="lines"></div>
+        </div>
+      </header>
+  
+      <main class="main">
+        <div class="content">
+          {% block body %} {% endblock %}
+        </div>
+      </main>
+  
+      <footer class="footer">
+  
+        <div class="footer__link-container">
+          <div class="footer__link">
+            <h2 class="h2">Контактная информация</h2>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/envelope.png')}}" alt="icons">
+              <span>test@test.ru</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/call.png')}}" alt="icons">
+              <span>+8 777 555 66 99</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/placeholder.png')}}" alt="icons">
+              <span>Москва, Бульвар Ленина 33</span>
+            </div>
+          </div>
+  
+          <div class="footer__link">
+            <h2 class="h2">Основные ссылки</h2>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Главная</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Наши проекты</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Наши услуги</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Контакты</span>
+            </div>
+          </div>
+  
+          <div class="footer__link">
+            <h2 class="h2">Наши проекты</h2>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>РосНано</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Сколково</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Проект “Восток”</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>ТЭЦ Калининграда</span>
+            </div>
+          </div>
+  
+          <div class="footer__link">
+            <h2 class="h2">Наши проекты</h2>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>РосVK.comНано</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Instagram</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Facebook</span>
+            </div>
+            <div class="link">
+              <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
+              <span>Twitter</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="line__footer"></div>
+        <span class='prava'>(с) 2019. Все права защищены.</span>
+      </footer>
+
     </div>
-
-    <footer class="footer">
-
-      <div class="footer__link-container">
-        <div class="footer__link">
-          <h2 class="h2">Контактная информация</h2>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/envelope.png')}}" alt="icons">
-            <span>test@test.ru</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/call.png')}}" alt="icons">
-            <span>+8 777 555 66 99</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/placeholder.png')}}" alt="icons">
-            <span>Москва, Бульвар Ленина 33</span>
-          </div>
-        </div>
-
-        <div class="footer__link">
-          <h2 class="h2">Основные ссылки</h2>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Главная</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Наши проекты</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Наши услуги</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Контакты</span>
-          </div>
-        </div>
-
-        <div class="footer__link">
-          <h2 class="h2">Наши проекты</h2>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>РосНано</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Сколково</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Проект “Восток”</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>ТЭЦ Калининграда</span>
-          </div>
-        </div>
-
-        <div class="footer__link">
-          <h2 class="h2">Наши проекты</h2>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>РосVK.comНано</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Instagram</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Facebook</span>
-          </div>
-          <div class="link">
-            <img class='ico' src="{{url_for('static', filename='img/footer/right-arrow.png')}}" alt="icons">
-            <span>Twitter</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="line__footer"></div>
-      <span class='prava'>(с) 2019. Все права защищены.</span>
-    </footer>
 </body>
 </html>
