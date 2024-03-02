@@ -5,6 +5,7 @@
 
 .our__projects {
     position: relative;
+    height: 1730px;
 }
 .img__fon {
     width: 100%;
@@ -46,10 +47,46 @@
 }
 .our__projects  .container  {
     position: absolute;
-    top: 0px;
+    top: 300px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
     margin: auto;
     height: 70px;
+}
+
+
+.our__projects  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1110px;
+    height: 1000px;
+    gap: 20px;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+.our__projects  .portfolio .card__product {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #3e3e3e;
+    border: 1px solid purple;
+
+}
+
+.title__h5 {
+    padding: 20px 0px 20px 15px;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 134%;
+    text-align: start;
+    color: #fff;
+
 }

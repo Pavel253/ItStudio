@@ -28,34 +28,12 @@ def index():
 
 @app.route('/our_projects')
 def our_projects():
-  posts = Post.query.all()
-  return render_template('our_projects.html', posts=posts)
-
+  return render_template('our_projects.html')
 
 
 @app.route('/services')
 def services():
   return render_template('services.html')
-
-
-@app.route('/forms')
-def forms():
-  return render_template('forms.html')
-
-
-@app.route('/upload', methods=['POST'])
-def upload():
-    name = request.form.get('name')
-    
-    image = request.files['image']
-    image_data = image.read()
-    
-    new_image = Post(name=name, image=image_data)
-    
-    db.session.add(new_image)
-    db.session.commit()
-    
-    return 'Image uploaded successfully'
 
 
 @app.route('/add_email', methods=['POST'])
@@ -66,8 +44,7 @@ def add_email():
     db.session.add(new_email)
     db.session.commit()
     
-    return render_template('index.html')
-  
+    return render_template('index.html')  
 
 
 if __name__ == "__main__":

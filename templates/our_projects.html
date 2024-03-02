@@ -16,15 +16,64 @@
       <h1 class="h1">Все проекты</h1>
       <p class="text">вы попали в наше портфолио, мы гордимся проектами и готовы предоставить вам наше мастерство</з>
     </div>
-
-  </section>
-
-{% for post in posts %}
-    <div class="col" id={{post.id}}>
-      <div class="card shadow-sm">
-        <img src="{{ post.image }}" alt="Image">
-          <span>{{post.name}}</span>
+    
+    <div class="portfolio">
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/2.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт продукт
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/2.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт продукт
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/2.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт продукт
+        </h5>
+      </div>
+      <div class="card__product">
+        <img class="img__fon" src="{{url_for('static', filename='img/Our-projects/portfolio/1.png')}}" alt="">
+        <h5 class='title__h5'>
+          Сайт визитка
+        </h5>
       </div>
     </div>
-    {% endfor %}
+  </section>
+
+
 {% endblock %}
